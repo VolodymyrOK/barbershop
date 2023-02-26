@@ -1,0 +1,151 @@
+:root {
+    --primary-font: 'Open Sans',
+        sans-serif;
+    --secondary--font: 'Raleway',
+        sans-serif;
+    --primary-text-color-theme-dark: #9DA4BD;
+    --primary-text-color-theme-light: #303030;
+    --secondary-text-color-theme-dark: #FFFFFF;
+    --secondary-text-color-theme-light: #555555;
+    --color-accent: #FF6C00;
+    --color-suptitle-theme-dark: rgba(157, 164, 189, 0.6);
+}
+
+/* Сброс маркеров для списков */
+.list {
+    list-style: none;
+}
+
+/* Сброс маркеров для ссылок*/
+.link {
+    text-decoration: none;
+}
+
+/* ========== COMPONENTS ========= */
+.modal-btn {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(16/12);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    cursor: pointer;
+    /* color: var(--secondary-text-color-theme-dark); */
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+    background-color: var(--color-accent);
+    color: var(--color-nav);
+}
+
+.media-list-link {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: calc(15/11);
+    letter-spacing: 0.2em;
+    color: var(--primary-text-color-theme-light);
+}
+
+.media-list-link:hover,
+.media-list-link:focus {
+    color: var(--color-accent);
+}
+
+.suptitle {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: calc(15/11);
+    text-transform: uppercase;
+}
+
+.suptitle-theme-dark {
+    color: var(--color-suptitle-theme-dark);
+}
+
+.suptitle-theme-light {
+    color: var(--primary-text-color-theme-light);
+}
+
+.section-description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(30/18);
+    letter-spacing: 0.02em;
+    /* color: var(--color-hero-text); */
+}
+
+/* ========== /COMPONENTS ========= */
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--bgcolor-main);
+    color: var(--color-main);
+}
+
+/* ========= HEADER ========= */
+.menu {
+    background-image: url(../images/slider-img2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menu-link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(16/12);
+    letter-spacing: 0.1em;
+    color: var(--secondary-text-color-theme-dark);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+    color: var(--color-accent);
+}
+
+.contact-phone-number {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(16/12);
+    letter-spacing: 0.1em;
+    color: var(--secondary-text-color-theme-dark);
+}
+
+.contact-phone-number:hover,
+.contact-phone-number:focus {
+    color: var(--color-accent);
+}
+
+/* Состояние активного элемента */
+.current {
+    color: var(--color-accent);
+}
+
+/* =========== /HEADER =========== */
+
+/* ============= HERO ============ */
+.hero-right-side {
+    background-image: url(../images/slider-img1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-title {
+    font-family: var(--secondary--font);
+    font-weight: 700;
+    font-size: 72px;
+    line-height: calc(85/72);
+    letter-spacing: 0.05em;
+    color: var(--secondary-text-color-theme-dark);
+}
+
+.section-description {
+    font-size: 18px;
+    line-height: calc(30/18);
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color-theme-dark);
+}
+
+/* ============= /HERO ============ */
+
+/* ============ ABOUT =========== */
+/* ============ /ABOUT ========== */
