@@ -1,7 +1,7 @@
 :root {
     --primary-font: 'Open Sans',
         sans-serif;
-    --secondary--font: 'Raleway',
+    --secondary-font: 'Raleway',
         sans-serif;
     --primary-text-color-theme-dark: #9DA4BD;
     --primary-text-color-theme-light: #303030;
@@ -9,6 +9,8 @@
     --secondary-text-color-theme-light: #555555;
     --color-accent: #FF6C00;
     --color-suptitle-theme-dark: rgba(157, 164, 189, 0.6);
+    --bgcolor-main: #FFFFFF;
+    --bgcolor-dark: #111319;
 }
 
 /* Сброс маркеров для списков */
@@ -74,12 +76,35 @@
     /* color: var(--color-hero-text); */
 }
 
+.section-title {
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 42px;
+    line-height: calc(49/42);
+    letter-spacing: 0.05em;
+}
+
+.section-title-theme-dark {
+    color: var(--secondary-text-color-theme-dark);
+}
+
+.section-title-theme-light {
+    color: var(--primary-text-color-theme-light);
+}
+
+.section-descr {
+    font-size: 18px;
+    line-height: calc(30/18);
+    letter-spacing: 0.02em;
+    color: var(--secondary-text-color-theme-light);
+}
+
 /* ========== /COMPONENTS ========= */
 
 body {
     font-family: var(--primary-font);
     background-color: var(--bgcolor-main);
-    color: var(--color-main);
+    color: var(--secondary-text-color-theme-light);
 }
 
 /* ========= HEADER ========= */
@@ -130,7 +155,7 @@ body {
 }
 
 .main-title {
-    font-family: var(--secondary--font);
+    font-family: var(--secondary-font);
     font-weight: 700;
     font-size: 72px;
     line-height: calc(85/72);
@@ -148,4 +173,46 @@ body {
 /* ============= /HERO ============ */
 
 /* ============ ABOUT =========== */
+.about-title {
+    font-size: 42px;
+    line-height: calc(49/42);
+    letter-spacing: 0.05em;
+    color: var(--primary-text-color-theme-light);
+}
+
+.about-text {
+    font-size: 14px;
+    line-height: calc(26/14);
+}
+
 /* ============ /ABOUT ========== */
+/* =========== SERVICES ========== */
+.services {
+    background-color: var(--bgcolor-dark);
+}
+
+.services-content {
+    font-size: 18px;
+    line-height: calc(30/18);
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color-theme-dark);
+}
+
+/* ========== /SERVICES ========== */
+/* ========== PRICES =========== */
+.prices-item-amount {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: calc(57/42);
+    letter-spacing: 0.05em;
+    color: var(--primary-text-color-theme-light);
+}
+
+.prices-item-descr {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: calc(15/11);
+    color: var(--primary-text-color-theme-light);
+}
+
+/* ========== /PRICES ========== */
