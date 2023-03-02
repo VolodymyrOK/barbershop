@@ -11,6 +11,7 @@
     --color-suptitle-theme-dark: rgba(157, 164, 189, 0.6);
     --bgcolor-main: #FFFFFF;
     --bgcolor-dark: #111319;
+    --color-main-btn: #FFFFFF;
 }
 
 /* Сброс маркеров для списков */
@@ -51,7 +52,7 @@
 .modal-btn:hover,
 .modal-btn:focus {
     background-color: var(--color-accent);
-    color: var(--color-nav);
+    color: var(--color-main-btn);
 }
 
 .media-link {
@@ -62,8 +63,7 @@
     color: var(--primary-text-color-theme-light);
 }
 
-.media-link:hover,
-.media-link:focus {
+.media-link:is(:hover, :focus) {
     color: var(--color-accent);
 }
 
@@ -134,7 +134,7 @@ body {
     color: var(--color-accent);
 }
 
-.contact-phone-number {
+.header-tel {
     font-weight: 600;
     font-size: 12px;
     line-height: calc(16/12);
@@ -142,8 +142,7 @@ body {
     color: var(--secondary-text-color-theme-dark);
 }
 
-.contact-phone-number:hover,
-.contact-phone-number:focus {
+.header-tel:is(:hover, :focus) {
     color: var(--color-accent);
 }
 
@@ -161,9 +160,9 @@ body {
     background-size: cover;
 }
 
-.main-title {
+.hero-title {
     font-family: var(--secondary-font);
-    font-weight: 700;
+    /* font-weight: 700; */
     font-size: 72px;
     line-height: calc(85/72);
     letter-spacing: 0.05em;
@@ -194,11 +193,11 @@ body {
 
 /* ============ /ABOUT ========== */
 /* =========== SERVICES ========== */
-.services {
+.prices {
     background-color: var(--bgcolor-dark);
 }
 
-.services-content {
+.prices-content {
     font-size: 18px;
     line-height: calc(30/18);
     letter-spacing: 0.02em;
@@ -207,7 +206,7 @@ body {
 
 /* ========== /SERVICES ========== */
 /* ========== PRICES =========== */
-.prices-amount {
+.benefits-item .count {
     font-weight: 700;
     font-size: 42px;
     line-height: calc(57/42);
@@ -215,7 +214,7 @@ body {
     color: var(--primary-text-color-theme-light);
 }
 
-.prices-descr {
+.benefits-item-text {
     font-weight: 600;
     font-size: 11px;
     line-height: calc(15/11);
