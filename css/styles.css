@@ -429,7 +429,7 @@ body {
     color: var(--primary-text-color-theme-light);
 }
 
-.plus {
+.benefits-item .plus {
     font-weight: 600;
     font-size: calc(16px * 2);
     line-height: calc(22/16);
@@ -457,7 +457,7 @@ body {
     background-color: var(--additional-section-color);
 }
 
-.barbers .section-title {
+.barbers-main-title {
     margin-bottom: 44px;
 }
 
@@ -597,7 +597,7 @@ input[type="submit"] {
     font-weight: 700;
 }
 
-.contacts .section-title {
+.contacts-main-title {
     margin-bottom: 40px;
 }
 
