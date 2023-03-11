@@ -13,6 +13,7 @@
     --bgcolor-dark: #111319;
     --color-main-btn: #FFFFFF;
     --color-section-dark: #191C26;
+    --additional-section-color: #F7F7F7;
     --gap: 30px;
 }
 
@@ -124,6 +125,7 @@ img {
     font-size: 11px;
     line-height: calc(15/11);
     text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .suptitle-theme-dark {
@@ -144,10 +146,12 @@ img {
 
 .section-title-theme-dark {
     color: var(--secondary-text-color-theme-dark);
+    margin-bottom: 44px;
 }
 
 .section-title-theme-light {
     color: var(--primary-text-color-theme-light);
+    margin-bottom: 20px;
 }
 
 .section-descr {
@@ -155,6 +159,7 @@ img {
     line-height: calc(30/18);
     letter-spacing: 0.02em;
     color: var(--secondary-text-color-theme-light);
+    margin-bottom: 20px;
 }
 
 /* ========== /COMPONENTS ========= */
@@ -280,7 +285,7 @@ body {
 }
 
 .hero-title {
-    margin-top: 20px;
+    margin-bottom: 20px;
     font-family: var(--secondary-font);
     font-size: 72px;
     line-height: calc(85/72);
@@ -290,7 +295,6 @@ body {
 
 .hero-text {
     max-width: 360px;
-    margin-top: 20px;
     font-size: 18px;
     line-height: calc(30/18);
     letter-spacing: 0.02em;
@@ -316,12 +320,6 @@ body {
 
 .about-info-wrap {
     padding-right: 100px;
-}
-
-.about-info .suptitle,
-.about-info .section-title,
-.about-info .section-descr {
-    margin-bottom: 20px;
 }
 
 .about-title {
@@ -353,14 +351,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 } */
-
-.prices .suptitle {
-    margin-bottom: 20px;
-}
-
-.prices .section-title {
-    margin-bottom: 44px;
-}
 
 .prices-list-wrap {
     display: flex;
@@ -450,11 +440,6 @@ body {
     padding-right: 101px;
 }
 
-.benefits-info-wrap .suptitle,
-.benefits-info-wrap .section-title {
-    margin-bottom: 20px;
-}
-
 .benefits-item-text {
     font-weight: 600;
     font-size: 11px;
@@ -462,10 +447,14 @@ body {
     color: var(--primary-text-color-theme-light);
 }
 
+.benefits .section-descr {
+    margin-bottom: 0;
+}
+
 /* ========== /BENEFITS ========== */
 /* =========== BARBERS =========  */
-.barbers .suptitle {
-    margin-bottom: 20px;
+.barbers {
+    background-color: var(--additional-section-color);
 }
 
 .barbers .section-title {
@@ -543,10 +532,6 @@ body {
     max-width: 600px;
     padding-top: 130px;
     padding-bottom: 183px;
-}
-
-.booking .section-title {
-    margin-bottom: 44px;
 }
 
 .booking-form-name {
@@ -630,10 +615,6 @@ input[type="submit"] {
     line-height: calc(30/18);
     letter-spacing: 0.02em;
     color: var(--primary-text-color-theme-dark)
-}
-
-.contacts .suptitle {
-    margin-bottom: 20px;
 }
 
 /* ======= BOOKING-CONTACTS =====  */
