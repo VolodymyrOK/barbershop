@@ -218,13 +218,13 @@ body {
 
 .header-contact {
     gap: 43px;
+    margin-right: 17px;
 }
 
 .header-tel {
     display: block;
     padding-top: 16px;
     padding-bottom: 16px;
-    /* margin-right: 43px; */
 
     font-weight: 600;
     font-size: 12px;
@@ -235,10 +235,6 @@ body {
 
 .header-tel:is(:hover, :focus) {
     color: var(--color-accent);
-}
-
-.btn-top {
-    margin-right: 17px;
 }
 
 /* Состояние активного элемента */
