@@ -468,8 +468,8 @@ body {
     color: var(--primary-text-color-theme-light);
 }
 
-.barbers-img {
-    margin-bottom: 30px;
+.barbers-item-content-wrapper {
+    padding-top: 30px;
 }
 
 .barbers-title {
@@ -486,12 +486,21 @@ body {
 
 .barbers-list {
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
     text-align: center;
+    gap: 30px;
 }
 
+/* .barbers-item:not(:nth-child(3n)) {
+    margin-right: 30px;
+}
+
+.barbers-item:not(:nth-last-child(-n+3)) {
+    margin-bottom: 30px;
+} */
+
 .barbers-item {
-    width: calc((100% - 60px) / 3);
+    flex-basis: calc((100% - 60px) / 3);
 }
 
 .barbers-social {
