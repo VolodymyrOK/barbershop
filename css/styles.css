@@ -15,6 +15,7 @@
     --color-section-dark: #191C26;
     --additional-section-color: #F7F7F7;
     --gap: 30px;
+    --hero-gradient: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2))
 }
 
 /* Сброс маркеров для списков */
@@ -280,7 +281,10 @@ body {
 .hero-right-side {
     margin-top: -120px;
     padding: 272px 100px 208px;
-    background-image: url(../images/slider-img3.jpg);
+    background-color: #7b7575;
+    background-image: var(--hero-gradient), url('../images/slider-img3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     z-index: -1;
     flex-grow: 1;
