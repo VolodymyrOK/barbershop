@@ -7,6 +7,7 @@
     --primary-text-color-theme-light: #303030;
     --secondary-text-color-theme-dark: #FFFFFF;
     --secondary-text-color-theme-light: #555555;
+    --main-btn-color: #FFFFFF;
     --color-accent: #FF6C00;
     --color-suptitle-theme-dark: rgba(157, 164, 189, 0.6);
     --bgcolor-main: #FFFFFF;
@@ -15,7 +16,9 @@
     --color-section-dark: #191C26;
     --additional-section-color: #F7F7F7;
     --gap: 30px;
-    --hero-gradient: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2))
+    --hero-gradient: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2));
+    --prices-list-gradient-left: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+    --prices-list-gradient-right: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 /* Сброс маркеров для списков */
@@ -48,7 +51,8 @@ ol {
 }
 
 button {
-    font-family: inherit;
+    /* font-family: inherit; 
+    прописан а нормалайзе*/
     cursor: pointer;
 }
 
@@ -91,10 +95,9 @@ img {
 .modal-btn {
     min-width: 160px;
     height: 40px;
-    /* padding: 12px 20px; */
 
     background-color: transparent;
-    color: var(--bgcolor-main);
+    color: var(--main-btn-color);
 
     border: 1px solid var(--color-accent);
     border-radius: 25px;
@@ -156,7 +159,8 @@ img {
 
 .section-title {
     font-family: var(--secondary-font);
-    font-weight: 700;
+    /* font-weight: 700; 
+    У заголовка H2 700 по умолчанию*/
     font-size: 42px;
     line-height: calc(49/42);
     letter-spacing: 0.05em;
@@ -176,7 +180,6 @@ img {
     font-size: 18px;
     line-height: calc(30/18);
     letter-spacing: 0.02em;
-    color: var(--secondary-text-color-theme-light);
     margin-bottom: 20px;
 }
 
@@ -196,7 +199,6 @@ body {
 
 .header-line {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -209,13 +211,17 @@ body {
     margin-right: 31px;
 }
 
-.header-list,
 .header-contact {
     display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 17px;
+    gap: 43px;
 }
 
-.header-list.list {
+.header-list {
     margin-left: 100px;
+    display: flex;
     gap: 30px;
 }
 
@@ -237,11 +243,6 @@ body {
 
 .header-link:is(:hover, :focus) {
     color: var(--color-accent);
-}
-
-.header-contact {
-    gap: 43px;
-    margin-right: 17px;
 }
 
 .header-tel {
@@ -268,14 +269,16 @@ body {
 /* =========== /HEADER =========== */
 
 /* ============= HERO ============ */
+
 .hero-line {
     display: flex;
 }
 
 .hero-left-side {
+    /* Как правильно оформить ссылки? */
     width: 100px;
-    display: flex;
 
+    display: flex;
     flex-direction: column-reverse;
 }
 
@@ -336,6 +339,7 @@ body {
 /* ============ ABOUT =========== */
 .about-wrap {
     display: flex;
+    gap: 30px;
 }
 
 .about-list {
@@ -343,14 +347,14 @@ body {
     gap: 30px;
 }
 
-/* .about-item:not(:last-child) {
-    margin-right: 30px;
-} */
+.about-img {
+    display: block;
+}
 
 .about-info-wrap {
-    max-width: 470px;
-    margin-left: 30px;
-    /* padding-right: 100px; */
+    padding-right: 100px;
+    flex-basis: calc((100% - 3 * 30px) / 3);
+    flex-grow: 1;
 }
 
 .about-title {
@@ -364,6 +368,7 @@ body {
     margin-bottom: 42px;
     font-size: 14px;
     line-height: calc(26/14);
+    letter-spacing: 0.02em;
 }
 
 .about-btn {
@@ -371,6 +376,7 @@ body {
 }
 
 /* ============ /ABOUT ========== */
+
 /* =========== PRICES ========== */
 .prices {
     background-color: var(--bgcolor-dark);
@@ -389,18 +395,16 @@ body {
 }
 
 .prices-list {
-    width: calc((100% - 30px)/2);
-    /* width: 570px; */
-    /* height: 240px; */
+    width: calc((100% - 30px) / 2);
     padding: 30px 22px 30px 20px;
 }
 
 .prices-list:first-child {
-    background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+    background-image: var(--prices-list-gradient-left);
 }
 
 .prices-list:last-child {
-    background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+    background-image: var(--prices-list-gradient-right);
 }
 
 .prices-item {
@@ -414,9 +418,12 @@ body {
     content: '';
     width: 100px;
     height: 1px;
-    background-color: #fff;
     flex-grow: 1;
-    background-color: currentColor;
+    background-color: rgba(157, 164, 189, 0.12);
+}
+
+.prices-item-content:first-child {
+    order: -1;
 }
 
 .prices-item+.prices-item {
@@ -430,35 +437,41 @@ body {
     color: var(--primary-text-color-theme-dark);
 }
 
-.prices-item-content:first-child {
-    order: -1;
-}
-
 .prices-btn {
     display: block;
     margin: 0 auto;
 }
 
-/* ========== /PRICES ========== */
+/* ========== /PRICES ============ */
+
 /* ========== BENEFITS =========== */
 .benefits-wrap {
     display: flex;
     padding-left: 69px;
+    padding-right: 101px;
+    gap: 130px;
+}
+
+.benefits-info-wrap {
+    padding-top: 9px;
 }
 
 .benefits-list {
+    width: 370px;
+
     display: flex;
     flex-wrap: wrap;
-    max-width: 370px;
-    margin-right: 130px;
+
+    flex-shrink: 0;
 }
 
 .benefits-item {
     width: 170px;
     height: 133px;
     padding: 20px 24px;
-    background-color: var(--additional-section-color);
     text-align: center;
+
+    background-color: var(--additional-section-color);
 }
 
 .benefits-item:nth-child(odd) {
@@ -466,7 +479,7 @@ body {
 }
 
 .benefits-item:nth-child(even) {
-    margin-top: 35px;
+    margin-top: 30px;
 }
 
 .benefits-item .count {
@@ -484,17 +497,17 @@ body {
     font-weight: 600;
     font-size: 16px;
     line-height: calc(22/16);
-    color: #FF6C00;
-}
-
-.benefits-info-wrap {
-    padding-right: 101px;
+    text-align: center;
+    color: transparent;
+    vertical-align: top;
+    text-shadow: 1px 7px #ff6c00;
 }
 
 .benefits-item-text {
     font-weight: 600;
     font-size: 11px;
     line-height: calc(15/11);
+
     color: var(--primary-text-color-theme-light);
 }
 
@@ -503,6 +516,7 @@ body {
 }
 
 /* ========== /BENEFITS ========== */
+
 /* =========== BARBERS =========  */
 .barbers {
     background-color: var(--additional-section-color);
@@ -513,18 +527,17 @@ body {
 }
 
 .barbers-title {
+    margin-bottom: 8px;
+
     font-size: 18px;
     line-height: calc(25/18);
     letter-spacing: 0.02em;
+
     color: var(--primary-text-color-theme-light);
 }
 
 .barbers-item-content-wrapper {
     padding-top: 30px;
-}
-
-.barbers-title {
-    margin-bottom: 8px;
 }
 
 .barbers-descr {
@@ -595,10 +608,13 @@ body {
 }
 
 .gallery-item {
-    width: calc((100% - 90px) / 4);
+    flex-basis: calc((100% - 90px) / 4);
 }
 
 /* =========== /GALLERY =========== */
+
+/* S T O P */
+
 /* ====== BOOKING-CONTACTS =======  */
 .booking-contacts {
     background-color: var(--color-section-dark);
