@@ -308,13 +308,14 @@ body {
 .hero-right-side {
     margin-top: -120px;
     padding: 272px 100px 208px;
-    background-color: #7b7575;
+
     background-image: var(--hero-gradient), url('../images/slider-img3.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
+
     z-index: -1;
     flex-grow: 1;
+
+    background-color: #303030;
 }
 
 .hero-title {
@@ -542,6 +543,7 @@ body {
 
 .barbers-descr {
     margin-bottom: 30px;
+
     font-size: 14px;
     line-height: calc(19/14);
     letter-spacing: 0.02em;
@@ -559,18 +561,18 @@ body {
     flex-basis: calc((100% - 60px) / 3);
 }
 
-.barbers-social-list {
+.barbers .social-list {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.barbers-social-item {
+.barbers .social-list-item {
     width: 44px;
     height: 44px;
 }
 
-.barbers-social-link {
+.barbers .social-list-link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -583,14 +585,18 @@ body {
     color: var(--primary-text-color-theme-light);
 }
 
-.barbers-social-icon {
+.barbers .social-list-icon {
     width: 20px;
     height: 20px;
     fill: currentColor;
 }
 
-.barbers-social-link:is(:hover, :focus) {
-    color: var(--color-accent);
+.barbers .social-list-link:is(:hover, :focus) {
+    background-color: var(--primary-text-color-theme-light);
+}
+
+.barbers .social-list-link:is(:hover, :focus) .social-list-icon {
+    fill: var(--color-accent);
 }
 
 /* =========== /BARBERS =========  */
