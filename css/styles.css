@@ -197,8 +197,9 @@ body {
     padding-bottom: 32px;
 
     position: absolute;
-    left: 0;
-    right: 0;
+    width: 100%;
+    /* left: 0;
+    right: 0; */
     z-index: 1;
 }
 
