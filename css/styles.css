@@ -305,10 +305,12 @@ body {
 }
 
 .tophead {
-    transform: rotate(-90deg);
+    position: absolute;
+    transform: rotate(-90deg) translateY(100%);
+    transform-origin: bottom left;
 
     padding-top: 27px;
-    padding-bottom: 58px;
+    padding-bottom: 40px;
 }
 
 .media-item:not(:last-child) {
