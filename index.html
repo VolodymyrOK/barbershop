@@ -51,7 +51,7 @@
           <a class="header-tel link" href="tel:+380441111111"
             >+38 044 111 11 11</a
           >
-          <button class="modal-btn btn-top" type="button">
+          <button class="modal-btn btn-top" type="button" data-modal-open>
             Online-booking
           </button>
         </div>
@@ -136,7 +136,7 @@
                 always "on the same wave" with clients. Therefore, we are always
                 ready to improve everyone who comes to us!
               </p>
-              <button class="modal-btn about-btn" type="button">
+              <button class="modal-btn about-btn" type="button" data-modal-open>
                 Online-booking
               </button>
             </div>
@@ -192,7 +192,7 @@
               </li>
             </ul>
           </div>
-          <button class="modal-btn prices-btn" type="button">
+          <button class="modal-btn prices-btn" type="button" data-modal-open>
             Reserva en línea
           </button>
         </div>
@@ -522,7 +522,7 @@ message</textarea
             >
               Contacts
             </h2>
-            <address>
+            <address class="contacts-address">
               <ul class="contacts-list list">
                 <li class="contacts-item">
                   <a
@@ -582,5 +582,17 @@ message</textarea
         </ul>
       </div>
     </footer>
+    <a href="#" class="button-backstart">Up!</a>
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close" type="button" data-modal-close>
+          <svg width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
