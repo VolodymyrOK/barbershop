@@ -717,7 +717,39 @@ input[type="submit"] {
 }
 
 .map {
+    display: flex;
+    align-items: flex-start;
     font-weight: 700;
+    gap: 16px;
+}
+
+.tel,
+.mail {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    gap: 16px;
+}
+
+.map::before,
+.tel::before,
+.mail::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    fill: #9DA4BD;
+}
+
+.map::before {
+    background-image: url(../images/map-pin.svg);
+}
+
+.tel::before {
+    background-image: url(../images/phone.svg);
+}
+
+.mail::before {
+    background-image: url(../images/mail.svg);
 }
 
 .contacts-main-title {
