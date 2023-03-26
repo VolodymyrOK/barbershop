@@ -19,8 +19,12 @@
     --hero-gradient: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2));
     --prices-list-gradient-left: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
     --prices-list-gradient-right: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
-    --transformation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    --backdrop-bgcolor: rgba(46, 47, 66, 0.4);
+    --modal-window-color: #FCFCFC;
+    --modal-window-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    --transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Сброс маркеров для списков */
@@ -110,7 +114,7 @@ img {
     letter-spacing: 0.09em;
     text-transform: uppercase;
 
-    transition: color, background-color var(--transformation);
+    transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
 }
 
 .modal-btn:is(:hover, :focus) {
@@ -125,7 +129,7 @@ img {
     letter-spacing: 0.2em;
     color: var(--primary-text-color-theme-light);
 
-    transition: color var(--transformation);
+    transition: color var(--transition-dur-and-func);
 }
 
 .media-link:is(:hover, :focus) {
@@ -207,7 +211,7 @@ body {
     padding-top: 32px;
     padding-bottom: 32px;
 
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 .header-line {
@@ -253,7 +257,7 @@ body {
     letter-spacing: 0.1em;
     color: var(--secondary-text-color-theme-dark);
 
-    transition: color var(--transformation);
+    transition: color var(--transition-dur-and-func);
 }
 
 .header-link:is(:hover, :focus) {
@@ -271,7 +275,7 @@ body {
     letter-spacing: 0.1em;
     color: var(--secondary-text-color-theme-dark);
 
-    transition: color var(--transformation);
+    transition: color var(--transition-dur-and-func);
 }
 
 .header-tel:is(:hover, :focus) {
@@ -595,7 +599,7 @@ body {
     background-color: var(--secondary-text-color-theme-dark);
     color: var(--primary-text-color-theme-light);
 
-    transition: background-color var(--transformation);
+    transition: background-color var(--transition-dur-and-func);
 }
 
 .barbers .social-list-icon {
@@ -603,7 +607,7 @@ body {
     height: 20px;
     fill: currentColor;
 
-    transition: fill var(--transformation);
+    transition: fill var(--transition-dur-and-func);
 }
 
 .barbers .social-list-link:is(:hover, :focus) {
@@ -734,7 +738,7 @@ input[type="submit"] {
     line-height: calc(30/18);
     letter-spacing: 0.02em;
     color: var(--primary-text-color-theme-dark);
-    transition: color var(--transformation);
+    transition: color var(--transition-dur-and-func);
 }
 
 .contacts-link:is(:hover, :focus) {
@@ -799,7 +803,7 @@ input[type="submit"] {
     letter-spacing: 0.09em;
     text-transform: uppercase;
 
-    transition: color, background-color var(--transformation);
+    transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
 }
 
 .button-backstart:is(:hover, :focus) {
@@ -815,22 +819,11 @@ input[type="submit"] {
     width: 100vw;
     height: 100vh;
     top: 0;
-    background-color: rgba(48, 48, 48, 0.445);
+    left: 0;
     z-index: 100;
-    transition: opacity 250ms linear, visibility 3000ms linear;
-}
+    background-color: var(--backdrop-bgcolor);
 
-.modal {
-    position: absolute;
-    width: 408px;
-    min-height: 576px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) translateY(0);
-    transition: transform 250ms linear;
+    transition: opacity var(--transition-dur-and-func), visibility var(--transition-dur-and-func);
 }
 
 .is-hidden {
@@ -839,9 +832,28 @@ input[type="submit"] {
     pointer-events: none;
 }
 
-.no-scroll {
-    /* overflow: hidden; */
+.modal {
+    position: absolute;
+    width: 408px;
+    min-height: 576px;
+    top: 50%;
+    left: 50%;
+
+    border-radius: 5px;
+    background-color: var(--modal-window-color);
+    box-shadow: var(--modal-window-shadow);
+
+    transform: translate(-50%, -50%) translateY(0);
+    transition: transform var(--transition-dur-and-func);
 }
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) translateY(100%);
+}
+
+/* .no-scroll {
+    overflow: hidden;
+} */
 
 .modal-close {
     position: absolute;
@@ -852,18 +864,22 @@ input[type="submit"] {
     right: 24px;
     width: 24px;
     height: 24px;
+
     border-radius: 50%;
-    fill: #000000;
     border: 1px solid rgba(0, 0, 0, 0.1);
 
-    transition: fill var(--transformation), background-color var(--transformation);
-}
-
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) translateY(100%);
+    transition: border-color var(--transition-dur-and-func);
 }
 
 .modal-close:is(:hover, :focus) {
-    fill: #ffffff;
-    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.modal-close-icon {
+    transition: fill var(--transition-dur-and-func);
+}
+
+.modal-close:hover .modal-close-icon,
+.modal-close:focus .modal-close-icon {
+    fill: var(--color-accent);
 }
