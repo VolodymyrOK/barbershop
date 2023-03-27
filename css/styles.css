@@ -735,21 +735,35 @@ input[type="submit"] {
 .tel::before,
 .mail::before {
     content: '';
+    display: inline-block;
     width: 24px;
     height: 24px;
-    fill: #9DA4BD;
+    transition: transform 800ms ease;
 }
 
 .map::before {
     background-image: url(../images/map-pin.svg);
+    background-repeat: no-repeat;
+    margin-top: 6px;
+}
+
+.map:hover::before,
+.map:focus::before,
+.tel:hover::before,
+.tel:focus::before,
+.mail:hover::before,
+.mail:focus::before {
+    transform: rotateY(180deg);
 }
 
 .tel::before {
     background-image: url(../images/phone.svg);
+    background-repeat: no-repeat;
 }
 
 .mail::before {
     background-image: url(../images/mail.svg);
+    background-repeat: no-repeat;
 }
 
 .contacts-main-title {
@@ -765,10 +779,10 @@ input[type="submit"] {
 }
 
 .contacts-link {
-    /* font-style: normal; */
     font-size: 18px;
     line-height: calc(30/18);
     letter-spacing: 0.02em;
+
     color: var(--primary-text-color-theme-dark);
     transition: color var(--transition-dur-and-func);
 }
@@ -821,7 +835,7 @@ input[type="submit"] {
     bottom: 50px;
     right: 15px;
 
-    background-color: #ff6a004b;
+    background-color: rgba(255, 106, 0, 0.3);
     color: var(--color-section-dark);
 
     border: 1px solid var(--color-accent);
