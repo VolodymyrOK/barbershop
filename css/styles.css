@@ -1016,7 +1016,9 @@ input[type="submit"] {
     border: 1px solid #999999;
     background-color: transparent;
     border-radius: 5px;
-    outline: none;
+    outline: transparent;
+
+    transition: border-color var(--transition-dur-and-func);
 }
 
 .form-btn {
