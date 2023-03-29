@@ -591,6 +591,77 @@ message</textarea
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <p class="modal-title">Feedback form</p>
+        <form class="modal-form">
+          <div class="modal-field">
+            <label>
+              <span class="modal-label-text">Enter your name*</span>
+              <div class="input-wrap">
+                <input
+                  type="text"
+                  class="modal-input"
+                  placeholder="Enter your name*"
+                  name="user-name"
+                  required
+                  minlength="2"
+                />
+                <svg class="modal-input-icon" width="20" height="20">
+                  <use href="/images/icons.svg#icon-person"></use>
+                </svg>
+              </div>
+            </label>
+          </div>
+          <div class="modal-field">
+            <label for="user-phone" class="modal-label-text"
+              >Enter your phone*
+            </label>
+            <div class="input-wrap">
+              <input
+                type="tel"
+                class="modal-input"
+                placeholder="Enter your phone*"
+                name="user-phone"
+                title="+380 (XX) XXX-XX-XX"
+                id="user-phone"
+                required
+                pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+              />
+              <svg class="modal-input-icon" width="20" height="20">
+                <use href="/images/icons.svg#icon-phone"></use>
+              </svg>
+              <p class="error">Error</p>
+            </div>
+          </div>
+          <div class="modal-field">
+            <label for="email" class="modal-label-text">Enter your email</label>
+            <div class="input-wrap">
+              <input
+                type="email"
+                class="modal-input"
+                placeholder="Enter your email"
+                name="user-email"
+                id="email"
+              />
+              <svg class="modal-input-icon" width="20" height="20">
+                <use href="/images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-field">
+            <label for="user-comment" class="modal-label-text"
+              >Enter your comment</label
+            >
+            <textarea
+              class="modal-textarea"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Enter your comment"
+            ></textarea>
+          </div>
+          <button class="modal-btn about-btn form-btn" type="submit">
+            Send
+          </button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
