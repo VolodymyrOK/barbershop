@@ -492,7 +492,8 @@
             <h2 class="section-title section-title-theme-dark">
               Online-booking
             </h2>
-            <form action="#" class="booking-form">
+            <!-- Old version of form -->
+            <!-- <form action="#" class="booking-form">
               <div class="booking-form-name">
                 <input
                   class="form-input-data"
@@ -511,10 +512,47 @@
                 <textarea class="form-input-text" name="message" id="#">
 message</textarea
                 >
-                <!-- <input class="modal-btn" type="submit" value="send" /> -->
+                <input class="modal-btn" type="submit" value="send" />
                 <button class="modal-btn">send</button>
               </div>
+            </form> -->
+            <!-- / Old version of form -->
+            <!-- New version of form -->
+            <form class="online-form" autocomplete="off">
+              <div class="online-field">
+                <input
+                  class="online-input online-item"
+                  id="online-name"
+                  name="online-name"
+                  type="text"
+                  required
+                  placeholder=" "
+                />
+                <label for="online-name" class="online-label">name*</label>
+              </div>
+              <div class="online-field">
+                <input
+                  class="online-input online-item"
+                  id="online-tel"
+                  name="online-tel"
+                  type="tel"
+                  required
+                  placeholder=" "
+                />
+                <label for="online-tel" class="online-label">phone*</label>
+              </div>
+              <div class="online-field online-field-text">
+                <textarea
+                  name="online-message"
+                  id="online-message"
+                  class="online-textarea online-item"
+                  placeholder=" "
+                ></textarea>
+                <label for="online-message" class="online-label">message</label>
+              </div>
+              <button type="submit" class="modal-btn online-btn">send</button>
             </form>
+            <!-- / New version of form -->
           </div>
           <div class="contacts">
             <h2
@@ -592,7 +630,7 @@ message</textarea
           </svg>
         </button>
         <p class="modal-title">Feedback form</p>
-        <form class="modal-form">
+        <form class="modal-form" autocomplete="off">
           <div class="modal-field">
             <label>
               <span class="modal-label-text">Enter your name*</span>
@@ -604,6 +642,7 @@ message</textarea
                   name="user-name"
                   required
                   minlength="2"
+                  pattern="^[a-zA-Zа-яА-ЯіІїЇєЄ]+$"
                 />
                 <svg class="modal-input-icon" width="20" height="20">
                   <use href="/images/icons.svg#icon-person"></use>
@@ -621,10 +660,10 @@ message</textarea
                 class="modal-input"
                 placeholder="Enter your phone*"
                 name="user-phone"
-                title="+380 (XX) XXX-XX-XX"
+                title="XXX-XXX-XX-XX"
                 id="user-phone"
                 required
-                pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
               />
               <svg class="modal-input-icon" width="20" height="20">
                 <use href="/images/icons.svg#icon-phone"></use>
@@ -658,6 +697,76 @@ message</textarea
               placeholder="Enter your comment"
             ></textarea>
           </div>
+
+          <!-- START Вариант чекбокса - иконка в css 
+
+          <label class="modal-label-checkbox"
+            ><input
+              class="original-checkbox visually-hidden"
+              type="checkbox"
+              name="checkbox"
+              value="" />Read and accept the license agreement
+            <span class="modal-checkbox"></span
+          ></label>
+
+            / END - Вариант чекбокса - иконка в css
+        -->
+
+          <!-- START Вариант чекбокса - через Before 
+
+          <div class="modal-field-checkbox">
+            <input
+              class="original-checkbox visually-hidden"
+              type="checkbox"
+              id="privacy"
+              name="user-privacy"
+              value="true"
+            />
+            <label for="privacy" class="modal-label-checktext"
+              >Read and accept the <a href="#">license</a> agreement</label
+            >
+          </div>
+          
+            / END - Вариант чекбокса - через Before 
+          -->
+
+          <!-- START Вариант чекбокса - через SVG - спрайт -->
+
+          <div class="modal-field-checkbox">
+            <input
+              class="original-checkbox visually-hidden"
+              type="checkbox"
+              id="privacy"
+              name="user-privacy"
+              value="true"
+            />
+            <label for="privacy" class="modal-label-checktext"
+              ><span
+                ><svg class="modal-check-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use></svg></span
+              >Read and accept the<a href="#">license</a>agreement</label
+            >
+          </div>
+
+          <!-- END Вариант чекбокса - через SVG - спрайт -->
+
+          <!-- СТАРТ Ещё варианты чекбоксов-->
+
+          <!-- <div class="modal-field-checkbox">
+            <input
+              class="original-checkbox visually-hidden"
+              type="checkbox"
+              id="privacy"
+              name="user-privacy"
+              value="true"
+            />
+            <label for="privacy" class="modal-label-checktext"
+              >Read and accept the<a href="#">license</a>agreement</label
+            >
+          </div> -->
+
+          <!-- КОНЕЦ Ещё варианты чекбоксов-->
+
           <button class="modal-btn about-btn form-btn" type="submit">
             Send
           </button>
