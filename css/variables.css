@@ -1,0 +1,28 @@
+:root {
+    --primary-font: 'Open Sans',
+        sans-serif;
+    --secondary-font: 'Raleway',
+        sans-serif;
+    --primary-text-color-theme-dark: #9DA4BD;
+    --primary-text-color-theme-light: #303030;
+    --secondary-text-color-theme-dark: #FFFFFF;
+    --secondary-text-color-theme-light: #555555;
+    --main-btn-color: #FFFFFF;
+    --color-accent: #FF6C00;
+    --color-suptitle-theme-dark: rgba(157, 164, 189, 0.6);
+    --bgcolor-main: #FFFFFF;
+    --bgcolor-dark: #111319;
+    --color-main-btn: #FFFFFF;
+    --color-section-dark: #191C26;
+    --additional-section-color: #F7F7F7;
+    --gap: 30px;
+    --hero-gradient: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2));
+    --prices-list-gradient-left: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+    --prices-list-gradient-right: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+    --backdrop-bgcolor: rgba(46, 47, 66, 0.4);
+    --modal-window-color: #FCFCFC;
+    --modal-window-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    --transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

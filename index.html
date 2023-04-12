@@ -18,7 +18,19 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./css/variables.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="./css/tablet.css"
+      media="screen and (min-width: 768px)"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/desktop.css"
+      media="screen and (min-width: 1200px)"
+    />
   </head>
   <body>
     <!-- HEADER -->
@@ -47,6 +59,11 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="mobile-menu-open js-open-menu">
+          <svg class="mobile-menu-open__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
         <div class="header-contact">
           <a class="header-tel link" href="tel:+380441111111"
             >+38 044 111 11 11</a
@@ -54,6 +71,63 @@
           <button class="modal-btn btn-top" type="button" data-modal-open>
             Online-booking
           </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div class="mobile-menu js-menu-container">
+        <div class="container mobile-menu__container">
+          <button type="button" class="mobile-menu__close-button js-close-menu">
+            <svg class="mobile-menu__close-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu-list list">
+            <li class="mobile-menu-item">
+              <a class="mobile-menu-link link current" href="#about">About</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a class="mobile-menu-link link" href="#services-and-prices"
+                >Services and prices</a
+              >
+            </li>
+            <li class="mobile-menu-item">
+              <a class="mobile-menu-link link" href="#our-barbers">Barbers</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a class="mobile-menu-link link" href="#contacts">Contacts</a>
+            </li>
+          </ul>
+
+          <a class="mobile-menu-tel link" href="tel:+380441111111"
+            >+38 044 111 11 11</a
+          >
+          <button
+            class="modal-btn mobile-menu-btn"
+            type="button"
+            data-modal-open
+          >
+            Online-booking
+          </button>
+          <ul class="media-list list">
+            <li class="media-item">
+              <a
+                class="media-link link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Instagram</a
+              >
+            </li>
+            <li class="media-item">
+              <a
+                class="media-link link"
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Youtube</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </header>
@@ -97,7 +171,7 @@
         </div>
       </section>
       <!-- ABOUT -->
-      <section class="about">
+      <!-- <section class="about">
         <div class="container section">
           <div class="about-wrap">
             <ul class="about-list list">
@@ -142,9 +216,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- PRICES -->
-      <section class="prices" id="services-and-prices">
+      <!-- <section class="prices" id="services-and-prices">
         <div class="container section">
           <p class="suptitle suptitle-theme-dark">
             Spend your time with the best masters
@@ -196,9 +270,9 @@
             Reserva en línea
           </button>
         </div>
-      </section>
+      </section> -->
       <!-- BENEFITS -->
-      <section class="benefits">
+      <!-- <section class="benefits">
         <div class="container section">
           <div class="benefits-wrap">
             <ul class="benefits-list list">
@@ -233,9 +307,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- BARBERS -->
-      <section class="barbers" id="our-barbers">
+      <!-- <section class="barbers" id="our-barbers">
         <div class="container section">
           <p class="suptitle suptitle-theme-light">
             For true enjoyers of the atmosphere
@@ -437,9 +511,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- GALLERY -->
-      <section class="gallery">
+      <!-- <section class="gallery">
         <div class="container section">
           <p class="suptitle suptitle-theme-light">
             In Latin, "barba" means "beard"
@@ -484,16 +558,16 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- BOOKING-CONTACTS -->
-      <section class="booking-contacts" id="contacts">
+      <!-- <section class="booking-contacts" id="contacts">
         <div class="container booking-contacts-line">
           <div class="booking">
             <h2 class="section-title section-title-theme-dark">
               Online-booking
-            </h2>
-            <!-- Old version of form -->
-            <!-- <form action="#" class="booking-form">
+            </h2> -->
+      <!-- Old version of form -->
+      <!-- <form action="#" class="booking-form">
               <div class="booking-form-name">
                 <input
                   class="form-input-data"
@@ -516,9 +590,9 @@ message</textarea
                 <button class="modal-btn">send</button>
               </div>
             </form> -->
-            <!-- / Old version of form -->
-            <!-- New version of form -->
-            <form class="online-form" autocomplete="off">
+      <!-- / Old version of form -->
+      <!-- New version of form -->
+      <!-- <form class="online-form" autocomplete="off">
               <div class="online-field">
                 <input
                   class="online-input online-item"
@@ -551,10 +625,10 @@ message</textarea
                 <label for="online-message" class="online-label">message</label>
               </div>
               <button type="submit" class="modal-btn online-btn">send</button>
-            </form>
-            <!-- / New version of form -->
-          </div>
-          <div class="contacts">
+            </form> -->
+      <!-- / New version of form -->
+      <!-- </div> -->
+      <!-- <div class="contacts">
             <h2
               class="section-title section-title-theme-dark contacts-main-title"
             >
@@ -592,10 +666,10 @@ message</textarea
             <p class="contacts-work-time">Every day from 9:00 to 22:00</p>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
     <!-- FOOTER -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer-line">
         <p class="footer-copyright">&copy; Copyright 2023</p>
         <ul class="media-list list">
@@ -619,10 +693,10 @@ message</textarea
           </li>
         </ul>
       </div>
-    </footer>
-    <a href="#" class="button-backstart">Up!</a>
+    </footer> -->
+    <!-- <a href="#" class="button-backstart">Up!</a> -->
     <!-- Modal window -->
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close" type="button" data-modal-close>
           <svg class="modal-close-icon" width="8" height="8">
@@ -696,9 +770,9 @@ message</textarea
               id="user-comment"
               placeholder="Enter your comment"
             ></textarea>
-          </div>
+          </div> -->
 
-          <!-- START Вариант чекбокса - иконка в css 
+    <!-- START Вариант чекбокса - иконка в css 
 
           <label class="modal-label-checkbox"
             ><input
@@ -712,7 +786,7 @@ message</textarea
             / END - Вариант чекбокса - иконка в css
         -->
 
-          <!-- START Вариант чекбокса - через Before 
+    <!-- START Вариант чекбокса - через Before 
 
           <div class="modal-field-checkbox">
             <input
@@ -730,9 +804,9 @@ message</textarea
             / END - Вариант чекбокса - через Before 
           -->
 
-          <!-- START Вариант чекбокса - через SVG - спрайт -->
+    <!-- START Вариант чекбокса - через SVG - спрайт -->
 
-          <div class="modal-field-checkbox">
+    <!-- <div class="modal-field-checkbox">
             <input
               class="original-checkbox visually-hidden"
               type="checkbox"
@@ -746,13 +820,13 @@ message</textarea
                   <use href="./images/icons.svg#icon-check"></use></svg></span
               >Read and accept the<a href="#">license</a>agreement</label
             >
-          </div>
+          </div> -->
 
-          <!-- END Вариант чекбокса - через SVG - спрайт -->
+    <!-- END Вариант чекбокса - через SVG - спрайт -->
 
-          <!-- СТАРТ Ещё варианты чекбоксов-->
+    <!-- СТАРТ Ещё варианты чекбоксов-->
 
-          <!-- <div class="modal-field-checkbox">
+    <!-- <div class="modal-field-checkbox">
             <input
               class="original-checkbox visually-hidden"
               type="checkbox"
@@ -765,14 +839,15 @@ message</textarea
             >
           </div> -->
 
-          <!-- КОНЕЦ Ещё варианты чекбоксов-->
+    <!-- КОНЕЦ Ещё варианты чекбоксов-->
 
-          <button class="modal-btn about-btn form-btn" type="submit">
+    <!-- <button class="modal-btn about-btn form-btn" type="submit">
             Send
           </button>
         </form>
       </div>
-    </div>
+    </div> -->
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
