@@ -25,7 +25,12 @@
 .header-list {
     margin-left: 19px;
     display: flex;
-    gap: 30px;
+    gap: 20px;
+}
+
+.header-contact {
+    gap: 0;
+    margin-right: 0;
 }
 
 /* ========= /HEADER ========= */

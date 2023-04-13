@@ -10,12 +10,23 @@
 
 /* ========== /COMPONENTS ========= */
 /* ========= HEADER ========= */
+.header-line {
+    gap: 200px;
+}
+
 .header-logo {
     margin-right: 31px;
 }
 
 .header-list {
     margin-left: 100px;
+    gap: 30px;
+}
+
+.header-contact {
+    margin-left: 0;
+    margin-right: 17px;
+    gap: 43px;
 }
 
 /* ========= /HEADER ========= */
