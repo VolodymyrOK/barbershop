@@ -68,6 +68,7 @@
 }
 
 .hero-right-side {
+    position: relative;
     padding: 272px 100px 237px;
 
     background-image: var(--hero-gradient), url('../images/img-tablet/slider-tablet3.jpg');
@@ -82,4 +83,71 @@
     line-height: calc(30/18);
 }
 
+.hero-slider-nav {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+}
+
+.hero-slider-list {
+    display: flex;
+    gap: 24px;
+}
+
+.hero-slider-link {
+    position: relative;
+    display: block;
+    width: 60px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: calc(15/11);
+    letter-spacing: 0.1em;
+
+    color: var(--color-suptitle-theme-dark);
+    transition: color var(--transition-dur-and-func);
+}
+
+.hero-slider-item:last-child {
+    text-align: right;
+}
+
+.hero-slider-link::after {
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--color-suptitle-theme-dark);
+
+    transition: background-color var(--transition-dur-and-func);
+}
+
+.hero-slider-link:is(:hover, :focus) {
+    color: #fff;
+}
+
+.hero-slider-link:is(:hover, :focus)::after {
+    background-color: #fff;
+}
+
 /* ============= /HERO ============ */
+/* ============ ABOUT =========== */
+.about-wrap {
+    display: flex;
+    gap: 30px;
+}
+
+.about-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-info-wrap {
+    padding-right: 100px;
+    flex-basis: calc((100% - 3 * 30px) / 3);
+    flex-grow: 1;
+}
