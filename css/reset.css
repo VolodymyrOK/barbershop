@@ -43,6 +43,10 @@ img {
     height: auto;
 }
 
+picture {
+    display: block;
+}
+
 /* ========== COMPONENTS ========= */
 .visually-hidden {
     position: absolute;

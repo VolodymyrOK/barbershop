@@ -60,6 +60,210 @@
     line-height: calc(49/42);
 }
 
-.about-text {
-    margin-bottom: 67px;
+.about-descr {
+    margin-right: 100px;
 }
+
+.about-text {
+    width: 470px;
+    margin-right: 100px;
+    margin-bottom: 42px;
+}
+
+/* ============ /ABOUT =========== */
+/* =========== PRICES ========== */
+.prices {
+    max-width: 1600px;
+    background-image: url(../images/img-tablet/services-prices-tablet.png);
+}
+
+.prices-list-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.prices-list {
+    width: calc((100% - 30px) / 2);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.prices-title {
+    font-size: 42px;
+    line-height: calc(49/42);
+}
+
+.prices-list:first-child {
+    padding-bottom: 30px;
+
+    background-image: var(--prices-list-gradient-left);
+}
+
+.prices-list:last-child {
+    padding-top: 30px;
+    margin-top: 0;
+
+    background-image: var(--prices-list-gradient-right);
+}
+
+/* ========== /PRICES ============ */
+/* ========== BENEFITS =========== */
+.benefits-wrap {
+    flex-direction: row;
+    padding-left: 69px;
+    padding-right: 101px;
+    gap: 130px;
+}
+
+.benefits-info-wrap {
+    padding-top: 9px;
+    order: 1;
+}
+
+.benefits-list {
+    margin-left: 0;
+}
+
+.benefits-item {
+    width: 170px;
+    height: 133px;
+    padding: 20px 24px;
+    text-align: center;
+
+    background-color: var(--additional-section-color);
+}
+
+.benefits-item:nth-child(odd) {
+    margin-right: 30px;
+}
+
+.benefits-item:nth-child(even) {
+    margin-top: 30px;
+}
+
+.benefits-item .count {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: calc(57/42);
+    letter-spacing: 0.05em;
+    color: var(--primary-text-color-theme-light);
+    display: block;
+    margin-bottom: 6px;
+}
+
+.benefits-item .count::after {
+    content: '+';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: calc(22/16);
+    text-align: center;
+    color: transparent;
+    vertical-align: top;
+    text-shadow: 1px 7px #ff6c00;
+}
+
+.benefits-item-text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: calc(15/11);
+
+    color: var(--primary-text-color-theme-light);
+}
+
+.benefits .section-descr {
+    margin-bottom: 0;
+}
+
+/* ========== /BENEFITS ========== */
+/* =========== BARBERS =========  */
+.barbers-main-title,
+.barbers-suptitle {
+    margin-left: 0;
+}
+
+.barbers-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.barbers-item {
+    flex-basis: calc((100% - 60px) / 3);
+}
+
+/* =========== /BARBERS =========  */
+/* =========== GALLERY =========== */
+.gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    /* column-gap: var(--gap);
+    row-gap: calc(var(--gap) * 2); */
+}
+
+.gallery-item {
+    flex-basis: calc((100% - 90px) / 4);
+}
+
+/* =========== /GALLERY =========== */
+.bc-container {
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.booking-contacts-line {
+    display: flex;
+}
+
+.booking {
+    padding-top: 130px;
+    padding-right: 30px;
+    padding-bottom: 183px;
+    min-width: calc((100% / 2) + 15px);
+}
+
+.title-booking {
+    text-align: left;
+}
+
+.address-line {
+    display: block;
+}
+
+/* ====== / BOOKING =======  */
+/* ======  CONTACTS =======  */
+.contacts {
+    /* max-width: 800px; */
+    padding: 130px 310px 120px 100px;
+    background-image: url("../images/img-desktop/contacts-bg-desktop.png");
+}
+
+.contacts-main-title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* ======= / CONTACTS =========  */
+/* =========== FOOTER =========  */
+.footer {
+    padding: 56px 0;
+}
+
+.footer-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-copyright {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: calc(15/11);
+    letter-spacing: 0.2em;
+    color: var(--primary-text-color-theme-dark);
+}
+
+/* ========= /FOOTER =======  */

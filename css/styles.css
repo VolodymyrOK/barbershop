@@ -76,7 +76,7 @@
 
 @media screen and (max-width: 767px) {
 
-    .suptitle {
+    .hero .suptitle {
         letter-spacing: 0.1em;
     }
 }
@@ -92,8 +92,8 @@
 .section-title {
     font-family: var(--secondary-font);
     font-weight: 700;
-    font-size: 28px;
-    line-height: calc(33/28);
+    font-size: 42px;
+    line-height: calc(49/42);
     letter-spacing: 0.05em;
 }
 
@@ -426,6 +426,9 @@ body {
 
 .about-title {
     width: 306px;
+
+    font-size: 28px;
+    line-height: calc(33/28);
 }
 
 .about-text {
@@ -440,366 +443,480 @@ body {
 }
 
 /* ============ /ABOUT ========== */
-
-/* ======= MODAL WINDOW ===== */
-.backdrop {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    background-color: var(--backdrop-bgcolor);
-
-    transition: opacity var(--transition-dur-and-func), visibility var(--transition-dur-and-func);
+/* =========== PRICES ========== */
+.prices {
+    background-color: var(--bgcolor-dark);
+    max-width: 480px;
+    margin: 0 auto;
+    background-image: url(../images/img-mobile/services-prices-mobile.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
+.prices-list {
+    width: 100%;
+    padding: 30px 11px;
 }
 
-.modal {
-    position: absolute;
-    width: 408px;
-    min-height: 576px;
-    top: 50%;
-    left: 50%;
-    padding: 20px;
-
-
-    border-radius: 5px;
-    background-color: var(--modal-window-color);
-    box-shadow: var(--modal-window-shadow);
-
-    transform: translate(-50%, -50%) translateY(0);
-    transition: transform var(--transition-dur-and-func);
+.prices-list:first-child {
+    padding-bottom: 0;
 }
 
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) translateY(100%);
+.prices-list:last-child {
+    padding-top: 0;
+    margin-top: 20px;
 }
 
-/* .no-scroll {
-    overflow: hidden;
-} */
+.prices-list-wrap {
+    margin-bottom: 44px;
+    background-image: var(--prices-list-gradient-left);
+}
 
-.modal-close {
-    position: absolute;
+.prices-title {
+    font-size: 40px;
+    line-height: calc(47/40);
+}
+
+.prices-item {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 24px;
-    right: 24px;
-    width: 24px;
-    height: 24px;
-
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-
-    transition: border-color var(--transition-dur-and-func);
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
 }
 
-.modal-close:is(:hover, :focus) {
-    border-color: var(--color-accent);
+.prices-item::before {
+    content: '';
+    width: 100px;
+    height: 1px;
+    flex-grow: 1;
+    background-color: rgba(157, 164, 189, 0.12);
 }
 
-.modal-close-icon {
-    transition: fill var(--transition-dur-and-func);
+.prices-item-content:first-child {
+    order: -1;
 }
 
-.modal-close:hover .modal-close-icon,
-.modal-close:focus .modal-close-icon {
-    fill: var(--color-accent);
+.prices-item+.prices-item {
+    margin-top: 20px;
 }
 
-.modal-title {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.5;
-    color: 555555px;
+.prices-item-content {
+    text-align: left;
+    font-size: 14px;
+    line-height: calc(20/14);
+    color: var(--primary-text-color-theme-dark);
+}
+
+.prices-btn {
+    display: block;
+    margin: 0 auto;
+}
+
+/* ========== /PRICES ============ */
+/* ========== BENEFITS =========== */
+.benefits-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.benefits-info-wrap {
+    order: -1;
+}
+
+.benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    flex-shrink: 0;
+}
+
+.benefits-item {
+    width: 193px;
+    height: 133px;
+    padding: 20px 24px;
     text-align: center;
+
+    background-color: var(--additional-section-color);
+}
+
+.benefits-item:nth-child(odd) {
+    margin-right: 30px;
+}
+
+.benefits-item:nth-child(even) {
     margin-top: 30px;
-    margin-bottom: 20px;
 }
 
-.modal-input {
-    font-size: 14px;
-    width: 100%;
-    height: 45px;
-    padding-left: 30px;
-    padding-right: 10px;
-    border: 1px solid #999999;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    ;
-    outline: transparent;
-
-    transition: border-color var(--transition-dur-and-func);
-}
-
-/* .modal-field:hover .modal-input,
-.modal-field:hover .modal-textarea,
-.modal-input:hover+.modal-input-icon {
-    border-color: var(--color-accent);
-    fill: var(--color-accent);
-} */
-
-.modal-input:focus,
-.modal-input:focus+.modal-input-icon,
-.modal-textarea:focus {
-    border-color: var(--color-accent);
-    fill: var(--color-accent);
-}
-
-.modal-input::placeholder,
-.modal-textarea::placeholder {
-    font-size: 12px;
-    color: teal;
-}
-
-.modal-input:not(:focus):not(:placeholder-shown):valid {
-    background-color: rgba(2, 92, 2, 0.452);
-}
-
-.modal-input:not(:focus):not(:placeholder-shown):invalid {
-    background-color: rgba(128, 0, 0, 0.212);
-}
-
-.error {
-    display: none;
-    color: red;
-}
-
-.modal-input:not(:focus):not(:placeholder-shown):invalid+.error {
+.benefits-item .count {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: calc(57/42);
+    letter-spacing: 0.05em;
+    color: var(--primary-text-color-theme-light);
     display: block;
+    margin-bottom: 6px;
 }
 
-.modal-label-text {
-    display: inline-block;
+.benefits-item .count::after {
+    content: '+';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: calc(22/16);
+    text-align: center;
+    color: transparent;
+    vertical-align: top;
+    text-shadow: 1px 7px #ff6c00;
+}
+
+.benefits-item-text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: calc(15/11);
+
+    color: var(--primary-text-color-theme-light);
+}
+
+.benefits .section-descr {
+    margin-bottom: 0;
+}
+
+.benefits-text {
+    font-size: 18px;
+    line-height: calc(30/18);
+    letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 479px) {
+    .benefits-list {
+        flex-direction: column;
+        margin: 0 auto;
+
+    }
+
+    .benefits-item:nth-child(odd) {
+        margin-right: 0;
+    }
+
+    .benefits-item:nth-child(even) {
+        margin-top: 0;
+    }
+
+    .benefits-item+.benefits-item {
+        margin-top: 30px;
+    }
+}
+
+/* ========== /BENEFITS ========== */
+/* =========== BARBERS =========  */
+.barbers {
+    background-color: var(--additional-section-color);
+}
+
+.barbers-main-title {
+    margin-bottom: 44px;
+}
+
+.barbers-title {
     margin-bottom: 8px;
-    cursor: pointer;
+
+    font-size: 18px;
+    line-height: calc(25/18);
+    letter-spacing: 0.02em;
+
+    color: var(--primary-text-color-theme-light);
+}
+
+.barbers-item-content-wrapper {
+    padding-top: 30px;
+}
+
+.barbers-descr {
+    margin-bottom: 30px;
+
     font-size: 14px;
-}
-
-.input-wrap {
-    position: relative;
-}
-
-.modal-input-icon {
-    fill: var(--color-section-dark);
-    position: absolute;
-    left: 5px;
-    bottom: 22px;
-
-    transition: fill var(--transition-dur-and-func);
-}
-
-.modal-textarea {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    resize: none;
-    border: 1px solid #999999;
-    background-color: transparent;
-    border-radius: 5px;
-    outline: transparent;
-
-    transition: border-color var(--transition-dur-and-func);
-}
-
-.form-btn {
-    display: block;
-    margin: 40px auto 0;
-    /* для предыдущих вариантов чекбокса*/
-    margin: 15px auto 0;
-}
-
-/* START - Вариант чекбокса - иконка в css */
-
-.modal-label-checkbox {
-    margin-left: 20px;
-    font-size: 14px;
-    position: relative;
-    cursor: pointer;
-}
-
-.modal-checkbox {
-    display: block;
-    width: 16px;
-    height: 16px;
-    border-radius: 4px;
-    background-color: var(--modal-window-color);
-    border: 1px solid var(--primary-text-color-theme-dark);
-    position: absolute;
-    top: 50%;
-
-    background-image: url(../images/check-off.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-
-    transform: translateY(-50%);
-    transition: background-color var(--transition-dur-and-func), border-color var(--transition-dur-and-func), background-image var(--transition-dur-and-func);
-}
-
-.original-checkbox:checked+.modal-checkbox {
-    background-color: var(--color-accent);
-    border-color: var(--color-accent);
-    background-image: url(../images/check-on.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.original-checkbox:focus+.modal-checkbox {
-    border-color: var(--color-accent);
-}
-
-/* END - Вариант чекбокса - иконка в css */
-
-/* ====================================== */
-
-/* START - Вариант чекбокса - через Before
-
-.modal-field-checkbox {
-    margin-top: 10px;
-}
-
-.modal-label-checktext::before {
-    content: '';
-    width: 16px;
-    height: 16px;
-    border-radius: 2px;
-    border: 1px solid var(--primary-text-color-theme-dark);
-    display: block;
-
-    background-image: url(../images/check-off.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-
-    transition: background-color var(--transition-dur-and-func), background-image var(--transition-dur-and-func), border-color var(--transition-dur-and-func);
-}
-
-.modal-label-checktext {
-    display: flex;
-    gap: 5px;
-    font-size: 14px;
-}
-
-.modal-label-checktext>a {
-    color: teal;
-
-    transition: color var(--transition-dur-and-func);
-}
-
-.modal-label-checktext>a:is(:hover, :focus) {
+    line-height: calc(19/14);
+    letter-spacing: 0.02em;
     color: var(--color-accent);
 }
 
-.original-checkbox:checked+.modal-label-checktext::before {
-    background-color: var(--color-accent);
-    border-color: transparent;
-    нет разницы между "border: none" и "border-color: transparent" 
-background-image: url(../images/check-on.svg);
-background-repeat: no-repeat;
-background-position: center;
-}
-
-.original-checkbox:focus+.modal-label-checktext::before {
-    border-color: var(--color-accent);
-}
-/ END - Вариант чекбокса - через Before
-*/
-
-/* START - Вариант чекбокса - через SVG - спрайт */
-
-.modal-label-checktext {
+.barbers-list {
     display: flex;
-    margin-top: 10px;
-    gap: 5px;
-}
-
-.modal-label-checktext>span {
-    display: flex;
+    flex-direction: column;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    width: 16px;
-    height: 16px;
-    border-radius: 2px;
-    border: 1px solid var(--primary-text-color-theme-dark);
-    fill: transparent;
-    transition: background-color var(--transition-dur-and-func), fill var(--transition-dur-and-func), border-color var(--transition-dur-and-func);
+    gap: 30px;
 }
 
-.original-checkbox:checked+.modal-label-checktext>span {
-    background-color: var(--color-accent);
-    fill: #F4F4FD;
-    border-color: transparent;
+.barbers-item {
+    flex-basis: 100%;
 }
 
-.original-checkbox:focus+.modal-label-checktext>span {
-    border-color: var(--color-accent);
-}
-
-.modal-label-checktext>a {
-    color: teal;
-
-    transition: color var(--transition-dur-and-func);
-}
-
-.modal-label-checktext>a:is(:hover, :focus) {
-    color: var(--color-accent);
-}
-
-/* END - Вариант чекбокса - через SVG - спрайт */
-
-/* ================================== */
-/* СТАРТ Ещё варианты чекбоксов */
-
-/* .modal-label-checktext {
-    margin-top: 10px;
+.barbers .social-list {
     display: flex;
-    align-items: center;
-    gap: 5px;
-    position: relative;
+    justify-content: center;
+    gap: 10px;
 }
 
-.modal-label-checktext::before {
-    content: '';
-    width: 40px;
-    height: 22px;
-    border: 1px solid var(--primary-text-color-theme-dark);
-    border-radius: 50px;
+.barbers .social-list-item {
+    width: 44px;
+    height: 44px;
+}
+
+.barbers .social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    background-color: var(--secondary-text-color-theme-dark);
+    color: var(--primary-text-color-theme-light);
 
     transition: background-color var(--transition-dur-and-func);
 }
 
-.modal-label-checktext::after {
-    content: '';
+.barbers .social-list-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+
+    transition: fill var(--transition-dur-and-func);
+}
+
+.barbers .social-list-link:is(:hover, :focus) {
+    background-color: var(--primary-text-color-theme-light);
+}
+
+.barbers .social-list-link:is(:hover, :focus) .social-list-icon {
+    fill: var(--color-accent);
+}
+
+/* =========== /BARBERS =========  */
+/* =========== GALLERY =========== */
+.gallery .suptitle {
+    margin-bottom: 71px;
+}
+
+.gallery-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.gallery-item {
+    flex-basis: 100%;
+}
+
+/* =========== /GALLERY =========== */
+/* ========= BOOKING =============  */
+
+.booking-contacts {
+    background-color: var(--color-section-dark);
+}
+
+.booking {
+    padding: 84px 31px;
+}
+
+.title-booking {
+    text-align: center;
+}
+
+.online-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.online-field {
+    width: 100%;
+    position: relative;
+}
+
+.online-item {
+    background-color: transparent;
+    border: none;
+
+    color: var(--color-suptitle-theme-dark);
+    border-bottom: 1px solid var(--color-suptitle-theme-dark);
+    outline: transparent;
+
+    transition: border-color var(--transition-dur-and-func);
+}
+
+.online-item:focus,
+.online-item:not(:placeholder-shown) {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.online-item:focus+.online-label,
+.online-item:not(:placeholder-shown)+.online-label {
+    color: #ffffff;
+    transform: translateY(-100%);
+}
+
+.online-input {
+    width: inherit;
+    height: 24px;
+    margin-bottom: 44px;
+}
+
+.online-label {
     position: absolute;
-    left: 2px;
-    top: 2px;
-    width: 18px;
-    height: 18px;
-    background-color: var(--primary-text-color-theme-dark);
-    border: 1px solid var(--primary-text-color-theme-dark);
-    border-radius: 50%;
+    left: 0;
+    top: 0;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: calc(15/11);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 
-    transition: transform var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
+    color: var(--color-suptitle-theme-dark);
+
+    transition: transform var(--transition-dur-and-func), color var(--transition-dur-and-func);
 }
 
-.original-checkbox:checked+.modal-label-checktext::after {
-    transform: translate(18px);
-    background-color: #F4F4FD;
+.online-textarea {
+    width: 100%;
+    height: 76px;
+    margin-bottom: 44px;
+    resize: none;
 }
 
-.original-checkbox:checked+.modal-label-checktext::before {
-    background-color: #a5e2a1;
-    border-color: transparent;
+.online-btn {
+    margin: 0 auto;
 }
 
-.original-checkbox:focus+.modal-label-checktext::before {
-    border-color: var(--color-accent);
-} */
+/* ====== / BOOKING =======  */
+/* ======  CONTACTS =======  */
+.contacts {
+    max-width: 100%;
+    padding: 84px 31px;
+    background-image: url("../images/img-mobile/contacts-bg-mobile.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
-/* КОНЕЦ Ещё варианты чекбоксов */
+.map {
+    display: flex;
+    align-items: flex-start;
+    font-weight: 700;
+    gap: 16px;
+}
+
+.tel,
+.mail {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    gap: 16px;
+}
+
+.map::before,
+.tel::before,
+.mail::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    transition: transform 800ms ease;
+}
+
+.map::before {
+    background-image: url(../images/map-pin.svg);
+    background-repeat: no-repeat;
+    margin-top: 6px;
+}
+
+.map:hover::before,
+.map:focus::before,
+.tel:hover::before,
+.tel:focus::before,
+.mail:hover::before,
+.mail:focus::before {
+    transform: rotateY(180deg);
+}
+
+.tel::before {
+    background-image: url(../images/phone.svg);
+    background-repeat: no-repeat;
+}
+
+.mail::before {
+    background-image: url(../images/mail.svg);
+    background-repeat: no-repeat;
+}
+
+.contacts-main-title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contacts-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.contacts-list {
+    margin-bottom: 70px;
+}
+
+.contacts-link {
+    font-size: 18px;
+    line-height: calc(30/18);
+    letter-spacing: 0.02em;
+
+    color: var(--primary-text-color-theme-dark);
+    transition: color var(--transition-dur-and-func);
+}
+
+.contacts-link:is(:hover, :focus) {
+    color: var(--color-accent);
+}
+
+.contacts-time {
+    color: var(--secondary-text-color-theme-dark);
+}
+
+.contacts-work-time {
+    width: 249px;
+    font-size: 18px;
+    line-height: calc(30/18);
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color-theme-dark);
+}
+
+/* ======= / CONTACTS =========  */
+/* =========== FOOTER =========  */
+.footer {
+    padding: 44px 0;
+}
+
+.footer-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-copyright {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: calc(15/11);
+    letter-spacing: 0.2em;
+    color: var(--primary-text-color-theme-dark);
+}
+
+/* ========= /FOOTER =======  */
+/* ====== BUTTON UP ======== */
+@media screen and (max-width: 767px) {
+    .button-backstart {
+        display: none;
+    }
+}
+
+/* ====== /BUTTON UP ======== */

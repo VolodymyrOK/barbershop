@@ -1,0 +1,362 @@
+/* ======= MODAL WINDOW ===== */
+.backdrop {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--backdrop-bgcolor);
+
+    transition: opacity var(--transition-dur-and-func), visibility var(--transition-dur-and-func);
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    width: 408px;
+    min-height: 576px;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+
+
+    border-radius: 5px;
+    background-color: var(--modal-window-color);
+    box-shadow: var(--modal-window-shadow);
+
+    transform: translate(-50%, -50%) translateY(0);
+    transition: transform var(--transition-dur-and-func);
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) translateY(100%);
+}
+
+/* .no-scroll {
+    overflow: hidden;
+} */
+
+.modal-close {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    transition: border-color var(--transition-dur-and-func);
+}
+
+.modal-close:is(:hover, :focus) {
+    border-color: var(--color-accent);
+}
+
+.modal-close-icon {
+    transition: fill var(--transition-dur-and-func);
+}
+
+.modal-close:hover .modal-close-icon,
+.modal-close:focus .modal-close-icon {
+    fill: var(--color-accent);
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: 555555px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.modal-input {
+    font-size: 14px;
+    width: 100%;
+    height: 45px;
+    padding-left: 30px;
+    padding-right: 10px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    ;
+    outline: transparent;
+
+    transition: border-color var(--transition-dur-and-func);
+}
+
+/* .modal-field:hover .modal-input,
+.modal-field:hover .modal-textarea,
+.modal-input:hover+.modal-input-icon {
+    border-color: var(--color-accent);
+    fill: var(--color-accent);
+} */
+
+.modal-input:focus,
+.modal-input:focus+.modal-input-icon,
+.modal-textarea:focus {
+    border-color: var(--color-accent);
+    fill: var(--color-accent);
+}
+
+.modal-input::placeholder,
+.modal-textarea::placeholder {
+    font-size: 12px;
+    color: teal;
+}
+
+.modal-input:not(:focus):not(:placeholder-shown):valid {
+    background-color: rgba(2, 92, 2, 0.452);
+}
+
+.modal-input:not(:focus):not(:placeholder-shown):invalid {
+    background-color: rgba(128, 0, 0, 0.212);
+}
+
+.error {
+    display: none;
+    color: red;
+}
+
+.modal-input:not(:focus):not(:placeholder-shown):invalid+.error {
+    display: block;
+}
+
+.modal-label-text {
+    display: inline-block;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.input-wrap {
+    position: relative;
+}
+
+.modal-input-icon {
+    fill: var(--color-section-dark);
+    position: absolute;
+    left: 5px;
+    bottom: 22px;
+
+    transition: fill var(--transition-dur-and-func);
+}
+
+.modal-textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    resize: none;
+    border: 1px solid #999999;
+    background-color: transparent;
+    border-radius: 5px;
+    outline: transparent;
+
+    transition: border-color var(--transition-dur-and-func);
+}
+
+.form-btn {
+    display: block;
+    margin: 40px auto 0;
+    /* для предыдущих вариантов чекбокса*/
+    margin: 15px auto 0;
+}
+
+/* START - Вариант чекбокса - иконка в css */
+
+.modal-label-checkbox {
+    margin-left: 20px;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+}
+
+.modal-checkbox {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    background-color: var(--modal-window-color);
+    border: 1px solid var(--primary-text-color-theme-dark);
+    position: absolute;
+    top: 50%;
+
+    background-image: url(../images/check-off.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transform: translateY(-50%);
+    transition: background-color var(--transition-dur-and-func), border-color var(--transition-dur-and-func), background-image var(--transition-dur-and-func);
+}
+
+.original-checkbox:checked+.modal-checkbox {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    background-image: url(../images/check-on.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.original-checkbox:focus+.modal-checkbox {
+    border-color: var(--color-accent);
+}
+
+/* END - Вариант чекбокса - иконка в css */
+
+/* ====================================== */
+
+/* START - Вариант чекбокса - через Before
+
+.modal-field-checkbox {
+    margin-top: 10px;
+}
+
+.modal-label-checktext::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid var(--primary-text-color-theme-dark);
+    display: block;
+
+    background-image: url(../images/check-off.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: background-color var(--transition-dur-and-func), background-image var(--transition-dur-and-func), border-color var(--transition-dur-and-func);
+}
+
+.modal-label-checktext {
+    display: flex;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.modal-label-checktext>a {
+    color: teal;
+
+    transition: color var(--transition-dur-and-func);
+}
+
+.modal-label-checktext>a:is(:hover, :focus) {
+    color: var(--color-accent);
+}
+
+.original-checkbox:checked+.modal-label-checktext::before {
+    background-color: var(--color-accent);
+    border-color: transparent;
+    нет разницы между "border: none" и "border-color: transparent" 
+background-image: url(../images/check-on.svg);
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.original-checkbox:focus+.modal-label-checktext::before {
+    border-color: var(--color-accent);
+}
+/ END - Вариант чекбокса - через Before
+*/
+
+/* START - Вариант чекбокса - через SVG - спрайт */
+
+.modal-label-checktext {
+    display: flex;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.modal-label-checktext>span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid var(--primary-text-color-theme-dark);
+    fill: transparent;
+    transition: background-color var(--transition-dur-and-func), fill var(--transition-dur-and-func), border-color var(--transition-dur-and-func);
+}
+
+.original-checkbox:checked+.modal-label-checktext>span {
+    background-color: var(--color-accent);
+    fill: #F4F4FD;
+    border-color: transparent;
+}
+
+.original-checkbox:focus+.modal-label-checktext>span {
+    border-color: var(--color-accent);
+}
+
+.modal-label-checktext>a {
+    color: teal;
+
+    transition: color var(--transition-dur-and-func);
+}
+
+.modal-label-checktext>a:is(:hover, :focus) {
+    color: var(--color-accent);
+}
+
+/* END - Вариант чекбокса - через SVG - спрайт */
+
+/* ================================== */
+/* СТАРТ Ещё варианты чекбоксов */
+
+/* .modal-label-checktext {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}
+
+.modal-label-checktext::before {
+    content: '';
+    width: 40px;
+    height: 22px;
+    border: 1px solid var(--primary-text-color-theme-dark);
+    border-radius: 50px;
+
+    transition: background-color var(--transition-dur-and-func);
+}
+
+.modal-label-checktext::after {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    background-color: var(--primary-text-color-theme-dark);
+    border: 1px solid var(--primary-text-color-theme-dark);
+    border-radius: 50%;
+
+    transition: transform var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
+}
+
+.original-checkbox:checked+.modal-label-checktext::after {
+    transform: translate(18px);
+    background-color: #F4F4FD;
+}
+
+.original-checkbox:checked+.modal-label-checktext::before {
+    background-color: #a5e2a1;
+    border-color: transparent;
+}
+
+.original-checkbox:focus+.modal-label-checktext::before {
+    border-color: var(--color-accent);
+} */
+
+/* КОНЕЦ Ещё варианты чекбоксов */
