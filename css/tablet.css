@@ -147,7 +147,19 @@
 }
 
 .about-info-wrap {
-    padding-right: 100px;
     flex-basis: calc((100% - 3 * 30px) / 3);
     flex-grow: 1;
+}
+
+.about-title {
+    width: 100%;
+}
+
+.about-descr {
+    font-size: 18px;
+    line-height: calc(30/18);
+}
+
+.about-text {
+    margin-bottom: 47px;
 }

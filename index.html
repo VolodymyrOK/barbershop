@@ -190,22 +190,42 @@
           <div class="about-wrap">
             <ul class="about-list list">
               <li class="about-item">
-                <img
-                  class="about-img"
-                  src="./images/barber1.jpg"
-                  alt="The master shaves the client's beard"
-                  width="270"
-                  height="445"
-                />
+                <picture
+                  ><source
+                    media="(min-width: 1200px)"
+                    srcset="./images/img-desktop/barber-desktop1.jpg"
+                    alt="The master shaves the client's beard"
+                    width="270"
+                    height="445"
+                  />
+                  <source
+                    media="(min-width: 756px)"
+                    srcset="./images/img-tablet/barber-tablet1.jpg"
+                    alt="The master shaves the client's beard"
+                    width="330"
+                    height="235"
+                  />
+                  <img alt="The master shaves the client's beard" />
+                </picture>
               </li>
               <li class="about-item">
-                <img
-                  class="about-img"
-                  src="./images/barber2.jpg"
-                  alt="The master makes a haircut to the client"
-                  width="270"
-                  height="445"
-                />
+                <picture
+                  ><source
+                    media="(min-width: 1200px)"
+                    srcset="./images/img-desktop/barber-desktop2.jpg"
+                    alt="The master shaves the client's beard"
+                    width="270"
+                    height="445"
+                  />
+                  <source
+                    media="(min-width: 756px)"
+                    srcset="./images/img-tablet/barber-tablet2.jpg"
+                    alt="The master shaves the client's beard"
+                    width="330"
+                    height="235"
+                  />
+                  <img alt="The master shaves the client's beard" />
+                </picture>
               </li>
             </ul>
             <div class="about-info-wrap">
@@ -213,7 +233,7 @@
               <h2 class="section-title section-title-theme-light about-title">
                 Best Barbershop in your city
               </h2>
-              <p class="section-descr">
+              <p class="section-descr about-descr">
                 If you want to add more confidence to your image, you should
                 definitely visit us.
               </p>
@@ -714,7 +734,7 @@ message</textarea
     </footer> -->
     <!-- <a href="#" class="button-backstart">Up!</a> -->
     <!-- Modal window -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close" type="button" data-modal-close>
           <svg class="modal-close-icon" width="8" height="8">
@@ -788,9 +808,9 @@ message</textarea
               id="user-comment"
               placeholder="Enter your comment"
             ></textarea>
-          </div> -->
+          </div>
 
-    <!-- START Вариант чекбокса - иконка в css 
+          <!-- START Вариант чекбокса - иконка в css -->
 
           <label class="modal-label-checkbox"
             ><input
@@ -801,10 +821,10 @@ message</textarea
             <span class="modal-checkbox"></span
           ></label>
 
-            / END - Вариант чекбокса - иконка в css
+          <!--  / END - Вариант чекбокса - иконка в css
         -->
 
-    <!-- START Вариант чекбокса - через Before 
+          <!-- START Вариант чекбокса - через Before 
 
           <div class="modal-field-checkbox">
             <input
@@ -822,9 +842,9 @@ message</textarea
             / END - Вариант чекбокса - через Before 
           -->
 
-    <!-- START Вариант чекбокса - через SVG - спрайт -->
+          <!-- START Вариант чекбокса - через SVG - спрайт -->
 
-    <!-- <div class="modal-field-checkbox">
+          <!-- <div class="modal-field-checkbox">
             <input
               class="original-checkbox visually-hidden"
               type="checkbox"
@@ -840,11 +860,11 @@ message</textarea
             >
           </div> -->
 
-    <!-- END Вариант чекбокса - через SVG - спрайт -->
+          <!-- END Вариант чекбокса - через SVG - спрайт -->
 
-    <!-- СТАРТ Ещё варианты чекбоксов-->
+          <!-- СТАРТ Ещё варианты чекбоксов-->
 
-    <!-- <div class="modal-field-checkbox">
+          <!-- <div class="modal-field-checkbox">
             <input
               class="original-checkbox visually-hidden"
               type="checkbox"
@@ -857,14 +877,14 @@ message</textarea
             >
           </div> -->
 
-    <!-- КОНЕЦ Ещё варианты чекбоксов-->
+          <!-- КОНЕЦ Ещё варианты чекбоксов-->
 
-    <!-- <button class="modal-btn about-btn form-btn" type="submit">
+          <button class="modal-btn about-btn form-btn" type="submit">
             Send
           </button>
         </form>
       </div>
-    </div> -->
+    </div>
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
