@@ -18,6 +18,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
@@ -163,25 +167,101 @@
               </li>
             </ul>
           </div>
-          <div class="hero-right-side">
-            <p class="suptitle suptitle-theme-dark">
-              A hair salon for men in Kyiv
-            </p>
-            <h1 class="hero-title">BarberShop</h1>
-            <p class="hero-text">
-              We are experts in trendy men’s haircuts. We work quickly,
-              carefully and with style.
-            </p>
-            <div class="hero-slider-nav">
-              <ul class="hero-slider-list list">
-                <li class="hero-slider-item">
-                  <a href="#" class="hero-slider-link link">Back</a>
-                </li>
-                <li class="hero-slider-item">
-                  <a href="#" class="hero-slider-link link">Forward</a>
-                </li>
-              </ul>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="hero-right-side3 hero-right-side">
+                  <p class="suptitle suptitle-theme-dark">
+                    A hair salon for men in Kyiv
+                  </p>
+                  <h1 class="hero-title">BarberShop</h1>
+                  <p class="hero-text">
+                    We are experts in trendy men’s haircuts. We work quickly,
+                    carefully and with style.
+                  </p>
+                  <div class="hero-slider-nav">
+                    <ul class="hero-slider-list list">
+                      <li class="hero-slider-item">
+                        <a
+                          href="#"
+                          class="hero-slider-link link swiper-button-prev"
+                          >Back</a
+                        >
+                      </li>
+                      <li class="hero-slider-item">
+                        <a
+                          href="#"
+                          class="hero-slider-link link swiper-button-next"
+                          >Forward</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="hero-right-side2 hero-right-side">
+                  <p class="suptitle suptitle-theme-dark">
+                    A hair salon for men in Kyiv
+                  </p>
+                  <h1 class="hero-title">BarberShop</h1>
+                  <p class="hero-text">
+                    We are experts in trendy men’s haircuts. We work quickly,
+                    carefully and with style.
+                  </p>
+                  <div class="hero-slider-nav">
+                    <ul class="hero-slider-list list">
+                      <li class="hero-slider-item">
+                        <a
+                          href="#"
+                          class="hero-slider-link link swiper-button-prev"
+                          >Back</a
+                        >
+                      </li>
+                      <li class="hero-slider-item">
+                        <a
+                          href="#"
+                          class="hero-slider-link link swiper-button-next"
+                          >Forward</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="hero-right-side1 hero-right-side">
+                  <p class="suptitle suptitle-theme-dark">
+                    A hair salon for men in Kyiv
+                  </p>
+                  <h1 class="hero-title">BarberShop</h1>
+                  <p class="hero-text">
+                    We are experts in trendy men’s haircuts. We work quickly,
+                    carefully and with style.
+                  </p>
+                  <div class="hero-slider-nav">
+                    <ul class="hero-slider-list list">
+                      <li class="hero-slider-item">
+                        <a
+                          href="#"
+                          class="hero-slider-link link swiper-button-prev"
+                          >Back</a
+                        >
+                      </li>
+                      <li class="hero-slider-item">
+                        <a
+                          href="#"
+                          class="hero-slider-link link swiper-button-next"
+                          >Forward</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
       </section>
@@ -195,18 +275,19 @@
                   ><source
                     media="(min-width: 1200px)"
                     srcset="./images/img-desktop/barber-desktop1.jpg"
-                    alt="The master shaves the client's beard"
                     width="270"
                     height="445"
                   />
                   <source
                     media="(min-width: 756px)"
                     srcset="./images/img-tablet/barber-tablet1.jpg"
-                    alt="The master shaves the client's beard"
                     width="330"
                     height="235"
                   />
-                  <img alt="The master shaves the client's beard" />
+                  <img
+                    src="./images/img-tablet/barber-tablet1.jpg"
+                    alt="The master shaves the client's beard"
+                  />
                 </picture>
               </li>
               <li class="about-item">
@@ -214,18 +295,19 @@
                   ><source
                     media="(min-width: 1200px)"
                     srcset="./images/img-desktop/barber-desktop2.jpg"
-                    alt="The master shaves the client's beard"
                     width="270"
                     height="445"
                   />
                   <source
                     media="(min-width: 756px)"
                     srcset="./images/img-tablet/barber-tablet2.jpg"
-                    alt="The master shaves the client's beard"
                     width="330"
                     height="235"
                   />
-                  <img alt="The master shaves the client's beard" />
+                  <img
+                    src="./images/img-tablet/barber-tablet2.jpg"
+                    alt="The master shaves the client's beard"
+                  />
                 </picture>
               </li>
             </ul>
@@ -370,14 +452,12 @@
                 ><source
                   media="(min-width: 1200px)"
                   srcset="./images/img-desktop/barber-card-desktop1.jpg"
-                  alt="The master makes a haircut to the client"
                   width="370"
                   height="346"
                 />
                 <source
                   media="(min-width: 756px)"
                   srcset="./images/img-tablet/barber-card-tablet1.jpg"
-                  alt="The master makes a haircut to the client"
                   width="450"
                   height="346"
                 />
@@ -448,14 +528,12 @@
                 ><source
                   media="(min-width: 1200px)"
                   srcset="./images/img-desktop/barber-card-desktop2.jpg"
-                  alt="The master makes a haircut to the client"
                   width="370"
                   height="346"
                 />
                 <source
                   media="(min-width: 756px)"
                   srcset="./images/img-tablet/barber-card-tablet2.jpg"
-                  alt="The master makes a haircut to the client"
                   width="450"
                   height="346"
                 />
@@ -526,14 +604,12 @@
                 ><source
                   media="(min-width: 1200px)"
                   srcset="./images/img-desktop/barber-card-desktop3.jpg"
-                  alt="The master makes a haircut to the client"
                   width="370"
                   height="346"
                 />
                 <source
                   media="(min-width: 756px)"
                   srcset="./images/img-tablet/barber-card-tablet3.jpg"
-                  alt="The master makes a haircut to the client"
                   width="450"
                   height="346"
                 />
@@ -615,14 +691,12 @@
                 ><source
                   media="(min-width: 1200px)"
                   srcset="./images/img-desktop/gallery-desktop1.jpg"
-                  alt="Man doing a haircut"
                   width="270"
                   height="360"
                 />
                 <source
                   media="(min-width: 756px)"
                   srcset="./images/img-tablet/gallery-tablet1.jpg"
-                  alt="Man doing a haircut"
                   width="330"
                   height="360"
                 />
@@ -639,14 +713,12 @@
                 ><source
                   media="(min-width: 1200px)"
                   srcset="./images/img-desktop/gallery-desktop2.jpg"
-                  alt="The master shaves the client's beard"
                   width="270"
                   height="360"
                 />
                 <source
                   media="(min-width: 756px)"
                   srcset="./images/img-tablet/gallery-tablet2.jpg"
-                  alt="The master shaves the client's beard"
                   width="330"
                   height="360"
                 />
@@ -663,14 +735,12 @@
                 ><source
                   media="(min-width: 1200px)"
                   srcset="./images/img-desktop/gallery-desktop3.jpg"
-                  alt="Man doing a haircut"
                   width="270"
                   height="360"
                 />
                 <source
                   media="(min-width: 756px)"
                   srcset="./images/img-tablet/gallery-tablet3.jpg"
-                  alt="Man doing a haircut"
                   width="330"
                   height="360"
                 />
@@ -687,14 +757,12 @@
                 ><source
                   media="(min-width: 1200px)"
                   srcset="./images/img-desktop/gallery-desktop4.jpg"
-                  alt="Man doing a haircut"
                   width="270"
                   height="360"
                 />
                 <source
                   media="(min-width: 756px)"
                   srcset="./images/img-tablet/gallery-tablet4.jpg"
-                  alt="Man doing a haircut"
                   width="330"
                   height="360"
                 />
@@ -846,23 +914,24 @@
         <p class="modal-title">Feedback form</p>
         <form class="modal-form" autocomplete="off">
           <div class="modal-field">
-            <label>
-              <span class="modal-label-text">Enter your name*</span>
-              <div class="input-wrap">
-                <input
-                  type="text"
-                  class="modal-input"
-                  placeholder="Enter your name*"
-                  name="user-name"
-                  required
-                  minlength="2"
-                  pattern="^[a-zA-Zа-яА-ЯіІїЇєЄ]+$"
-                />
-                <svg class="modal-input-icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-person"></use>
-                </svg>
-              </div>
-            </label>
+            <label for="user-name" class="modal-label-text"
+              >Enter your name*</label
+            >
+            <div class="input-wrap">
+              <input
+                type="text"
+                class="modal-input"
+                placeholder="Enter your name*"
+                name="user-name"
+                id="user-name"
+                required
+                minlength="2"
+                pattern="^[a-zA-Zа-яА-ЯіІїЇєЄ]+$"
+              />
+              <svg class="modal-input-icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
           </div>
           <div class="modal-field">
             <label for="user-phone" class="modal-label-text"
@@ -928,5 +997,7 @@
     <!-- /Modal window -->
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
   </body>
 </html>

@@ -37,8 +37,18 @@
 
 .hero-right-side {
     padding-bottom: 208px;
+}
 
+.hero-right-side3 {
     background-image: var(--hero-gradient), url('../images/img-desktop/slider-desktop3.jpg');
+}
+
+.hero-right-side2 {
+    background-image: var(--hero-gradient), url('../images/img-desktop/slider-desktop2.jpg');
+}
+
+.hero-right-side1 {
+    background-image: var(--hero-gradient), url('../images/img-desktop/slider-desktop1.jpg');
 }
 
 .hero-title {

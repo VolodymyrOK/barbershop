@@ -70,11 +70,19 @@
 .hero-right-side {
     position: relative;
     padding: 272px 100px 237px;
-
-    background-image: var(--hero-gradient), url('../images/img-tablet/slider-tablet3.jpg');
-
     flex-grow: 1;
+}
 
+.hero-right-side3 {
+    background-image: var(--hero-gradient), url('../images/img-tablet/slider-tablet3.jpg');
+}
+
+.hero-right-side2 {
+    background-image: var(--hero-gradient), url('../images/img-tablet/slider-tablet2.jpg');
+}
+
+.hero-right-side1 {
+    background-image: var(--hero-gradient), url('../images/img-tablet/slider-tablet1.jpg');
 }
 
 .hero-text {
@@ -107,6 +115,11 @@
 
     color: var(--color-suptitle-theme-dark);
     transition: color var(--transition-dur-and-func);
+    cursor: pointer;
+}
+
+.hero-slider-item:first-child {
+    text-align: left;
 }
 
 .hero-slider-item:last-child {
@@ -119,7 +132,7 @@
     width: 60px;
     height: 1px;
     left: 0;
-    bottom: 0;
+    bottom: 14px;
     background-color: var(--color-suptitle-theme-dark);
 
     transition: background-color var(--transition-dur-and-func);
